@@ -8,6 +8,7 @@ function start() {
 function mount() {
   const player = document.createElement("div");
   player.id = "player";
+  player.className = "player";
   player.style.position = "relative";
   const board = document.getElementById("board");
   board.appendChild(player);

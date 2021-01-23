@@ -1,18 +1,18 @@
 const map = [
   "WWWWWWWWWWWWWWWWWWWWW",
-  "W   W     W     W W W",
+  "W B W     W  X  W W W",
   "W W W WWW WWWWW W W W",
-  "W W W   W     W W   W",
+  "W W W   W B   W W   W",
   "W WWWWWWW W WWW W W W",
-  "W         W     W W W",
+  "W   X  B  W  X  W W W",
   "W WWW WWWWW WWWWW W W",
-  "W W   W   W  W    W W",
+  "W W   W B W  W  X W W",
   "W WWWWW W W W WWW W W",
-  "P     W W W W W W WWW",
+  "X     W W W W W W WWW",
   "WWWWW W W W W W W W W",
-  "W     W W W   W W W W",
+  "W  X  W W W   W W W W",
   "W WWWWWWW WWWWW W W W",
-  "W       W       W   W",
+  "W  XXX  W   X   W   W",
   "WWWWWWWWWWWWWWWWWWWWW",
 ];
 
@@ -41,9 +41,17 @@ for (let i = 0; i < map.length; i++) {
       celFilha.classList.add("accessReleasedMenor");
       celMenor.classList.add("accessReleasedMenorAinda");
     }
-    if (map[i][j] === "P") {
-      cel.classList.add("player");
+    if (map[i][j] === "X") {
+      cel.classList.add("passed");
+      celFilha.classList.add("passedMenor");
+      celMenor.classList.add("passedMenorX");
     }
+    if (map[i][j] === "B") {
+      cel.classList.add("bolinha");
+      celFilha.classList.add("bolinhaMenor");
+      celMenor.classList.add("bolinhaM");
+    }
+
     celFilha.appendChild(celMenor);
     cel.appendChild(celFilha);
     celArea.appendChild(cel);
