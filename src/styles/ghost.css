@@ -1,20 +1,5 @@
-div#player {
+div#ghost {
   width: 20px;
   height: 20px;
-  animation: changeBackgroundColor 0.5s infinite; /* propriedade de animação */
-}
-
-@keyframes changeBackgroundColor {
-  0% {
-    background-image: url("../assets/player/0.png");
-  }
-  45% {
-    background-image: url("../assets/player/1.png");
-  }
-  85% {
-    background-image: url("../assets/player/2.png");
-  }
-  100% {
-    background-image: url("../assets/player/3.png");
-  }
+  background-image: url("../assets/Ghost/Body1.png");
 }

@@ -1,5 +1,6 @@
-@import url("board.css");
+@import url("./board.css");
 @import url("./player.css");
+@import url("./ghost.css");
 
 html,
 body {
