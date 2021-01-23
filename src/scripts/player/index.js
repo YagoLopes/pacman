@@ -20,18 +20,22 @@ function move(player) {
     if (keyName === "ArrowDown") {
       boxTop += 10;
       player.style.top = `${boxTop}px`;
+      player.style.transform = "rotate(100deg)";
     }
     if (keyName === "ArrowUp") {
       boxTop -= 10;
       player.style.top = `${boxTop}px`;
+      player.style.transform = "rotate(-85deg)";
     }
     if (keyName === "ArrowRight") {
       boxLeft += 15;
       player.style.left = `${boxLeft}px`;
+      player.style.transform = "rotate(0deg)";
     }
     if (keyName === "ArrowLeft") {
       boxLeft -= 15;
       player.style.left = `${boxLeft}px`;
+      player.style.transform = "rotate(-175deg)";
     }
   });
 }
