@@ -1,0 +1,6 @@
+@import url("./player.css");
+
+div#board {
+  width: 500px;
+  height: 500px;
+}
