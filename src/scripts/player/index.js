@@ -18,19 +18,19 @@ function move(player) {
   document.addEventListener("keydown", (event) => {
     const keyName = event.key;
     if (keyName === "ArrowDown") {
-      boxTop += 20;
+      boxTop += 10;
       player.style.top = `${boxTop}px`;
     }
     if (keyName === "ArrowUp") {
-      boxTop -= 20;
+      boxTop -= 10;
       player.style.top = `${boxTop}px`;
     }
     if (keyName === "ArrowRight") {
-      boxLeft += 35;
+      boxLeft += 15;
       player.style.left = `${boxLeft}px`;
     }
     if (keyName === "ArrowLeft") {
-      boxLeft -= 35;
+      boxLeft -= 15;
       player.style.left = `${boxLeft}px`;
     }
   });
