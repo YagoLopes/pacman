@@ -5,15 +5,15 @@ function startBoard() {
     "W W W WWW WWWWW W W W",
     "W W W   W B   W W   W",
     "W WWWWWWW W WWW W W W",
-    "W   X  B  W  X  W W W",
+    "W   X  B  W  G  W W W",
     "W WWW WWWWW WWWWW W W",
-    "W W   W B W W   X W W",
+    "W W   W B W W   G W W",
     "W WWWWW W W W WWW W W",
-    "X     W W W W W W WWW",
+    "P     W W W W W W WWW",
     "WWWWW W W W W W W W W",
     "W  X  W W W   W W W W",
     "W WWWWWWW WWWWW W W W",
-    "W  XXX  W   X   W   W",
+    "W  XXX  W   G   W   W",
     "WWWWWWWWWWWWWWWWWWWWW",
   ];
   popularColuna(map);
@@ -54,6 +54,16 @@ function popularRow(i, rowLinha, map) {
       rowInsed.classList.add("wrapper");
       rowInsideTheUpper.classList.add("ball");
     }
+    if (map[i][j] === "P") {
+      function mountPlayer() {
+        rowInsed.classList.add("posicaoJogador");
+        rowInsideTheUpper.classList.add("jogador");
+        if (rowInsideTheUpper.className !== "wall") {
+          move(rowInsideTheUpper);
+        }
+      }
+      mountPlayer();
+    }
 
     rowInsed.appendChild(rowInsideTheUpper);
     row.appendChild(rowInsed);
@@ -61,3 +71,31 @@ function popularRow(i, rowLinha, map) {
   }
 }
 startBoard();
+let boxTop = -145;
+let boxLeft = 1;
+
+function move(player) {
+  document.addEventListener("keydown", (event) => {
+    const keyName = event.key;
+    if (keyName === "ArrowDown") {
+      boxTop += 10;
+      player.style.top = `${boxTop}px`;
+      player.style.transform = "rotate(100deg)";
+    }
+    if (keyName === "ArrowUp") {
+      boxTop -= 10;
+      player.style.top = `${boxTop}px`;
+      player.style.transform = "rotate(-85deg)";
+    }
+    if (keyName === "ArrowRight") {
+      boxLeft += 15;
+      player.style.left = `${boxLeft}px`;
+      player.style.transform = "rotate(0deg)";
+    }
+    if (keyName === "ArrowLeft") {
+      boxLeft -= 15;
+      player.style.left = `${boxLeft}px`;
+      player.style.transform = "rotate(-175deg)";
+    }
+  });
+}

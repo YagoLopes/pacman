@@ -18,10 +18,14 @@ function mount() {
 function move(player) {
   document.addEventListener("keydown", (event) => {
     const keyName = event.key;
+    const notMove = document.querySelector(".wall");
+
     if (keyName === "ArrowDown") {
-      boxTop += 10;
-      player.style.top = `${boxTop}px`;
-      player.style.transform = "rotate(100deg)";
+      if (!notMove) {
+        boxTop += 10;
+        player.style.top = `${boxTop}px`;
+        player.style.transform = "rotate(100deg)";
+      }
     }
     if (keyName === "ArrowUp") {
       boxTop -= 10;

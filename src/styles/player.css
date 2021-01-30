@@ -1,9 +1,8 @@
-div#player {
+.jogador {
   z-index: 1000;
   width: 20px;
   height: 20px;
-  top: -145px;
-  left: 1px;
+
   animation: changeBackgroundColor 0.5s infinite; /* propriedade de animação */
 }
 

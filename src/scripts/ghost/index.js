@@ -42,5 +42,3 @@ function move(ghost) {
     random > 50 ? top(random) : left(random);
   }, 1000);
 }
-
-start();
