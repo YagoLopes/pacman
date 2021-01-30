@@ -1,3 +1,4 @@
+//player
 let boxTop = -145;
 let boxLeft = 1;
 
@@ -6,7 +7,7 @@ function start() {
 }
 
 function mount() {
-  const player = document.createElement("div");
+  const player = document.createElement("span");
   player.id = "player";
   player.className = "player";
   player.style.position = "relative";
@@ -88,5 +89,3 @@ function moveAndCheckColision(keyName, player) {
       return;
   }
 }
-
-start();
