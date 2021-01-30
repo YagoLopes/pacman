@@ -1,5 +1,24 @@
-div#ghost {
+div.ghost {
   width: 20px;
   height: 20px;
+}
+#ghost-1 {
   background-image: url("../assets/Ghost/Body1.png");
+  left: 218px;
+  top: -251px;
+}
+#ghost-2 {
+  background-image: url("../assets/Ghost/Body2.png");
+  top: -110px;
+  left: 167px;
+}
+#ghost-3 {
+  background-image: url("../assets/Ghost/Body3.png");
+  top: -397px;
+  left: 69px;
+}
+#ghost-4 {
+  background-image: url("../assets/Ghost/Body4.png");
+  top: -230px;
+  left: 409px;
 }

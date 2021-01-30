@@ -7,7 +7,7 @@ function startBoard() {
     "W WWWWWWW W WWW W W W",
     "W   X  B  W  X  W W W",
     "W WWW WWWWW WWWWW W W",
-    "W W   W B W  W  X W W",
+    "W W   W B W W   X W W",
     "W WWWWW W W W WWW W W",
     "X     W W W W W W WWW",
     "WWWWW W W W W W W W W",
@@ -20,7 +20,7 @@ function startBoard() {
 }
 
 function popularColuna(map) {
-  const boardArea = document.querySelector("#board");
+  const boardArea = document.querySelector("#conteiner");
   for (let i = 0; i < map.length; i++) {
     const row = document.createElement("div");
     row.id = "column-" + i;

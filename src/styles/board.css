@@ -1,15 +1,18 @@
 #board {
   margin: 0 auto;
-  padding: 20px;
-  max-width: 750px;
-  width: 100vw;
-  height: 448px;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
+#conteiner {
+  width: 41vw;
+  height: 363px;
+  position: relative;
 }
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
 }
 
 .block {

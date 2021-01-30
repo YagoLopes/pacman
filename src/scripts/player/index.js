@@ -1,5 +1,5 @@
-let boxTop = 0;
-let boxLeft = 0;
+let boxTop = -145;
+let boxLeft = 1;
 
 function start() {
   mount();
@@ -10,7 +10,7 @@ function mount() {
   player.id = "player";
   player.className = "player";
   player.style.position = "relative";
-  const board = document.getElementById("board");
+  const board = document.getElementById("conteiner");
   board.appendChild(player);
   move(player);
 }

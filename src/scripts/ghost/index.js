@@ -1,37 +1,39 @@
-let boxTop2 = 0;
-let boxLeft2 = 0;
-
 function start() {
   mount();
 }
 
 function mount() {
-  const ghost = document.createElement("div");
-  ghost.id = "ghost";
-  ghost.style.position = "relative";
-  const board = document.getElementById("board");
-  board.appendChild(ghost);
-  move(ghost);
+  for (let i = 1; i < 5; i++) {
+    const ghost = document.createElement("div");
+    ghost.id = `ghost-${i}`;
+    ghost.className = "ghost";
+    ghost.style.position = "relative";
+    const conteiner = document.getElementById("conteiner");
+    conteiner.appendChild(ghost);
+    move(ghost);
+  }
 }
 
 function move(ghost) {
+  let boxTop = ghost.offsetTop;
+  let boxLeft = ghost.offsetLeft;
   function top(random) {
     if (random % 2 === 0) {
-      boxTop2 += 10;
-      ghost.style.top = `${boxTop2}px`;
+      boxTop += 5;
+      ghost.style.top = `${boxTop}px`;
     } else {
-      boxTop2 -= 10;
-      ghost.style.top = `${boxTop2}px`;
+      boxTop -= 5;
+      ghost.style.top = `${boxTop}px`;
     }
   }
 
   function left(random) {
     if (random % 2 === 0) {
-      boxLeft2 += 15;
-      ghost.style.left = `${boxLeft2}px`;
+      boxLeft += 8;
+      ghost.style.left = `${boxLeft}px`;
     } else {
-      boxLeft2 -= 15;
-      ghost.style.left = `${boxLeft2}px`;
+      boxLeft -= 8;
+      ghost.style.left = `${boxLeft}px`;
     }
   }
 
